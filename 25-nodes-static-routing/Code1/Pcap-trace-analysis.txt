@@ -1,0 +1,43 @@
+n20 30.003013 ---sent
+n15 30.011718
+n15 30.018992
+n10 30.027697 n20 30.027697
+n10 30.039150
+n5  30.047855 n15 30.047855
+n5  30.056769
+n0  30.065474 n10 30.065474 ---received [dt0 = (t_rec-t_sent) = 0.062461]
+
+n24 31.010434 ---sent
+n18 31.019139
+n18 31.025254
+n12 31.033959 n24 31.033959
+n12 31.040253
+n6  31.048959 n18 31.048959
+n6  31.059993
+n0  31.068698 n12 31.068698 ---received
+
+n4  32.001893 ---sent
+n3  32.010598
+n3  32.020632
+n2  32.029337 n4  32.029337
+n2  32.034430
+n1  32.043135 n3  32.043135
+n1  32.051149
+n0  32.059854 n2  32.059854 ---received
+
+n20 35.000050 ---sent
+n15 35.008754
+n15 35.009118
+n10 35.017823 n20 35.017823
+n10 35.018187
+n5  35.026892 n15 35.026892
+n5  35.027256
+n0  35.035961 n10 35.035961 ---received [dt1 = (t_rec-t_sent) = 0.035461]
+
+Likewise.......
+
+
+The above analysis clearly shows that the static routing is working as per our desire.
+
+Also we can see a significant reduction in delay (dt) from dt0 = 0.062461 to dt1 = 0.035461.
+This is because after on packet tranfer (end-to-end), the path is explored (ie now there is no arp msgs).

@@ -1,0 +1,48 @@
+nodes:
+  n20  n21  n22  n23  n24
+  n15  n16  n17  n18  n19
+  n10  n11  n12  n13  n14
+  n5   n6   n7   n8   n9
+  n0   n1   n2   n3   n4
+
+In this n12 is highly prone to collisions (n16, n11, n6, n18, n13, n8 are less prone)
+Ret == Retransmission
+
+n10 30.067232 				---start
+n11 30.072129
+n11 30.075514 [Ret]
+n10 30.080411 [Ret]
+n11 30.080922 [Ret]
+n12 30.085819 and n10 30.085819 [Ret]
+n12 30.086183 [Ret]
+n13 30.091080 and n11 30.091080 [Ret]
+n13 30.091444 [Ret]
+n14 30.096341 and n12 30.096341 [Ret] 	---received
+n14 30.096705 [ACK] 					---ACK start
+n13 30.097602 [ACK]
+n13 30.098086 [Dup ACK #1]
+n12 30.098983 and n14 30.098983 [Dup ACK]
+n12 30.099347 [Dup ACK #1]
+n11 30.100244 [ACK] and n13 30.100244 [Dup ACK #2]
+n11 30.100608 [Dup ACK]
+n10 30.101504 [ACK] and n12 30.101504 [Dup ACK #2]	---ACK received
+
+n20 31.059530 				---start
+n20 31.065278 [Ret]
+n16 31.070175
+n16 31.070539 [Ret]
+n12 31.075438 and n20 31.075438 [Ret]
+n12 31.075800 [Ret]
+n8  31.080698 and n16 31.080698 [Ret]
+n8  31.081062 [Ret]
+n4  31.085959 and n12 31.085959 [Ret] 	---received
+n4  31.086323 [ACK] 					---ACK start
+n8  31.087220
+n8  31.088184 [Dup ACK #1]
+n12 31.089081 and n4  31.089081 [Dup ACK]
+n12 31.089445 [Dup ACK #1]
+n16 31.090343 and n8  31.090343 [Dup ACK #2]
+n16 31.090707 [Dup ACK]
+n20 31.091604 and n12 31.091604 [Dup ACK #2]	---ACK received
+
+Likewise...
